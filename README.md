@@ -30,9 +30,7 @@ font-sizeは4の倍数で設定。ただし、10px未満は削除。例外とし
 フォントにおけるpx, em/rem の感覚を共存させるため、px指定の方はCSS変数で再定義することにした。
 
 # 更新履歴
-<dl>
-<dt>2022/10/21</dt>
-    <dd>初回作成。</dd>
-    <dd>* {box-sizing:border-box}</dd>
-    <dd>font-sizeのpx指定をCSS変数で相対値化。</dd>
-</dl>
+2022/10/21
++ 初回作成。
++ *{box-sizing:border-box}
++ font-sizeのpx指定をCSS変数で相対値化。
