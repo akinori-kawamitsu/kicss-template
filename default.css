@@ -2,6 +2,31 @@
 * {
     box-sizing: border-box;
 }
+/* 以下のウェブフォントは不要なものは記述を削除またはコメントアウトすること。 */
+@font-face {
+    font-family: "noto-sans";
+    src: url(./font/Noto_Sans_Subset/NotoSansJP-Regular-Subset.woff2) format("woff2");
+    font-weight: normal;
+}
+@font-face {
+    font-family: "noto-sans";
+    src: url(./font/Noto_Sans_Subset/NotoSansJP-Bold-Subset.woff2) format("woff2");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "noto-serif";
+    src: url(./font/Noto-Serif-Subset/NotoSerifJP-Regular-Subset.woff2) format("woff2");
+    font-weight: normal;
+}
+@font-face {
+    font-family: "noto-serif";
+    src: url(./font/Noto-Serif-Subset/NotoSerifJP-Bold-Subset.woff2) format("woff2");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "kosugimaru";
+    src: url(./font/Kosugi_Maru_Subset/KosugiMaru-Regular-Subset.woff2) format("woff2");
+}
 
 :root {
     --fs-12: 0.75rem;
@@ -15,5 +40,25 @@
     --fs-32: 2rem;
     --fs-36: 2.25rem;
     --fs-40: 2.5rem;
-    font-size: var(--fs-16);
+    --fs-p:  1rem;
+    --fs-small: 0.0875rem;
+    font-size: var(--fs-p);
+
+    --font-serif: "noto-serif", serif;
+    --font-sanserif: "noto-sans", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", Meiryo, sans-serif;
+    --font-marugo: "kosugimaru", sans-serif;
+    --font-mono: Consolas, "Courier New", Courier, Monaco, Osaka-mono, "MS Gothic", monospace;
+    
+    --color-base: #FFF;
+    --color-text: #000;
+    --color-theme: hsl(240,100%,37%);
+    --color-main: hsl(105,100%,20%);
+    --color-accent: hsl(15,100%,40%);
+    --color-strong: hsl(355,65%,40%);
+    --dark-base: #444;
+    --dark-text: #FFF;
+    --dark-theme: hsl(190,90%,60%);
+    --dark-main: hsl(105,60%,65%);
+    --dark-accent: hsl(15,100%,80%);
+    --dark-strong: hsl(350,100%,80%);
 }
