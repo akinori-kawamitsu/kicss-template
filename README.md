@@ -44,3 +44,7 @@ font-sizeは4の倍数で設定。ただし、10px未満は削除。例外とし
 2022/12/29
 + 色のCSS変数セットを追加
 + ウェブフォント Noto-Sans, Noto-serif, Kosugi-maru のサブセットフォント追加
+
+2022/2/5
++ parts/hanburger に、ハンバーガーメニューのパーツを追加。バニラのJavaScriptで動作する。
++ フォントにZenOldMinchoを追加。

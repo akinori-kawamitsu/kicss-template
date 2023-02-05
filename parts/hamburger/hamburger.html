@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* ハンバーガーボタン */
+        .hamburger {
+            width: 44px;
+            height: 44px;
+            position: relative;
+            padding: 0;
+            margin: 0;
+            background-color: transparent;
+            box-shadow: none;
+            border: 1px solid blue;
+            cursor: pointer;
+        }
+        .burg-line-tc {
+            display: block;
+        }
+        .burg-line-tc::before {
+            content: "";
+            display: block;
+            background-color: #000;
+            width: 40px;
+            height: 3px;
+            border-radius: 3px;
+            position: absolute;
+            top: 5px;
+            left: 1px;
+        }
+        .burg-line-tc::after {
+            content: "";
+            display: block;
+            background-color: #000;
+            width: 40px;
+            height: 3px;
+            border-radius: 3px;
+            position: absolute;
+            top: 15px;
+            left: 1px;
+        }
+        .burg-line-b {
+            display: block;
+            background-color: #000;
+            width: 40px;
+            height: 3px;
+            border-radius: 3px;
+            position: absolute;
+            top: 25px;
+            left: 1px;
+        }
+        .burg-text {
+            display: block;
+        }
+        .burg-text::before {
+            content: "menu";
+            position: absolute;
+            top: 27px;
+            left: 4px;
+        }
+        /* ハンバーガーボタン クリック後 */
+        .js-open .burg-line-tc::before {
+            transform: rotate(45deg);
+            transform-origin: 50%;
+            width: 38px;
+            top: 15px;
+        }
+        .js-open .burg-line-tc::after {
+            transform: rotate(-45deg);
+            transform-origin: 50%;
+            width: 38px;
+            top: 15px;
+        }
+        .js-open .burg-line-b {
+            width: 0px;
+        }
+        .js-open .burg-text::before {
+            content: "close";
+        }
+        /* グローバルナビゲーション */
+        .gnav {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+        }
+        .gnav > li {
+            border: 1px solid blue;
+        }
+    </style>
+    <script>
+        function navopen() {
+            document.getElementById("hamburger").classList.toggle("js-open");
+            document.getElementById("gnav-container").classList.toggle("js-open");
+        }
+    </script>
+</head>
+<body>
+    
+<button class="hamburger" id="hamburger" onclick="navopen()">
+    <span class="burg-line-tc" aria-role="presentation"></span>
+    <span class="burg-line-b" aria-role="presentation"></span>
+    <span class="burg-text"></span>
+</button>
+<nav id="gnav-container" class="gnav-container">
+    <ul id="gnav" class="gnav">
+        <li><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a></li>
+    </ul>
+</nav>
+</body>
+</html>
